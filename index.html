@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://kit.fontawesome.com/b6ed6a6f7b.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@900&display=swap" rel="stylesheet">
+	<title></title>
+	<style>
+		* {
+			box-sizing: border-box!important;
+			font-family: 'Noto Sans', sans-serif;
+		}
+		*::selection {
+			background: #008000;
+		}
+		html,
+		body {
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			margin:  0;
+		}
+		body {
+			background: #ddffdd;
+			cursor: default;
+		}
+		button {
+			border-radius: 24px;
+			background: #ffffff;
+			color: #000;
+			padding: 10px 28px;
+			border: none;
+			font-size: inherit;
+			cursor: pointer;
+		}
+		a {
+			color: #40aa40;
+		}
+		a:visited {
+			color: #aaaaaa;
+		}
+		a:hover, a:focus {
+			color: #008000;
+		}
+		a[not-a] {
+			text-decoration: none;
+			cursor: inherit;
+			color: inherit;
+		}
+		.banner {
+			background: #007f00;
+			background: space url('/banner.compressed.jpg');
+			padding: 60px;
+			margin: 10px;
+			margin-top: 0;
+			color: #000000;
+			text-align: center;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+		.big {
+			font-size: 96px;
+			font-variant: small-caps;
+		}
+		.medium {
+			font-size: 72px;
+		}
+		.small {
+			font-size: 36px;
+		}
+		.nav {
+			display: flex;
+			flex-direction: row;
+			font-size: 36px;
+			justify-content: space-around;
+			padding: 30px;
+		}
+		.nav * {
+			cursor: pointer;
+		}
+		.pad150 {
+			margin: 75px 0;
+		}
+		.pad20 {
+			margin: 10px 0;
+		}
+		.panel {
+			background: #00aa00;
+			padding: 10px;
+		}
+		.title {
+			text-align: center;
+		}
+		.row {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: stretch;
+		}
+		.project {
+			padding: 30px;
+			margin: 10px;
+			background: #fff;
+			border-radius: 2px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		.icon {
+			width: 128px;
+			height: 128px;
+		}
+		#contacts * {
+			margin: 10px 5px;
+		}
+	</style>
+</head>
+<body>
+	<a name="home"></a>
+	<div class="nav">
+		<div style="cursor: default;"><div style="display: inline-block; background: round url('/green.png'); width: 30px; height: 30px; margin-right: 5px;"></div>GREEN</div>
+		<div><a href="#home">Home</a></div>
+		<div><a href="#stake">Stake now</a></div>
+		<div><a href="#contact">Contacts</a></div>
+	</div>
+    <div class="banner">
+    	<div></div>
+    	<div>
+        	<div class="medium">Welcome!</div>
+        	<div class="big">WE ARE GREEN</div>
+        	<div class="medium">Professional</div>
+        	<div class="medium">Proof-of-Stake</div>
+        	<div class="medium">Network Validator</div>
+        	<div class="small">&nbsp;</div>
+        	<div class="small"><button><a not-a href="#stake">Stake now</a></button></div>
+        </div>
+    </div>
+    <div class="pad150">&nbsp;</div>
+    <a name="stake"></a>
+    <div class="panel">
+    	<div class="medium title">STAKE NOW</div>
+    	<div class="pad20"></div>
+    	<div class="row">
+    		<div class="project">
+    			<div class="icon" style="background: url('/desmos.jpg');"></div>
+    			<div class="small title">Desmos</div>
+    		</div>
+    		<div class="project">
+    			<div class="icon" style="background: url('/sifchain.jpg');"></div>
+    			<div class="small title">Sifchain</div>
+    		</div>
+    	</div>
+    </div>
+    <div class="pad150">&nbsp;</div>
+    <a name="contact"></a>
+    <div class="medium title">CONTACT US</div>
+    <div style="display: flex; flex-direction: row; justify-content: space-around; align-items: stretch; padding: 15px; font-size: 36px;">
+    	<div id="contacts">
+    		<div><i class="fa-brands fa-github"></i><a href="https://github.com/green-node">GitHub</a></div>
+    		<div><i class="fa-brands fa-discord"></i><a href="https://discord.gg/AdQjZtZFCK">Discord</a></div>
+    		<div><i class="fa-solid fa-envelope"></i></div>
+    		<div></div>
+    		<div></div>
+    		<div></div>
+    	</div>
+    	<div><i class="fa-solid fa-phone-volume" style="font-size: 4em; color: #008000;"></i></div>
+    </div>
+</body>
+</html>
