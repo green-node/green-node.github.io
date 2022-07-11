@@ -7,117 +7,10 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@900&display=swap" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
 	<link rel="icon" href="/green.png">
 	<title>Green</title>
-	<style>
-		* {
-			box-sizing: border-box!important;
-			font-family: 'Noto Sans', sans-serif;
-		}
-		*::selection {
-			background: #008000;
-		}
-		html,
-		body {
-			width: 100%;
-			height: 100%;
-			padding: 0;
-			margin:  0;
-		}
-		body {
-			background: #ddffdd;
-			cursor: default;
-		}
-		button {
-			border-radius: 24px;
-			background: #ffffff;
-			color: #000;
-			padding: 10px 28px;
-			border: none;
-			font-size: inherit;
-			cursor: pointer;
-		}
-		a {
-			color: #40aa40;
-		}
-		a:visited {
-			color: #aaaaaa;
-		}
-		a:hover, a:focus {
-			color: #008000;
-		}
-		a[not-a] {
-			text-decoration: none;
-			cursor: inherit;
-			color: inherit;
-		}
-		.banner {
-			background: #007f00;
-			background: space url('/banner.compressed.jpg');
-			padding: 60px;
-			margin: 10px;
-			margin-top: 0;
-			color: #000000;
-			text-align: center;
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-		}
-		.big {
-			font-size: 96px;
-			font-variant: small-caps;
-		}
-		.medium {
-			font-size: 72px;
-		}
-		.small {
-			font-size: 36px;
-		}
-		.nav {
-			display: flex;
-			flex-direction: row;
-			font-size: 36px;
-			justify-content: space-around;
-			padding: 30px;
-		}
-		.nav * {
-			cursor: pointer;
-		}
-		.pad150 {
-			margin: 75px 0;
-		}
-		.pad20 {
-			margin: 10px 0;
-		}
-		.panel {
-			background: #00aa00;
-			padding: 10px;
-		}
-		.title {
-			text-align: center;
-		}
-		.row {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-around;
-			align-items: stretch;
-		}
-		.project {
-			padding: 30px;
-			margin: 10px;
-			background: #fff;
-			border-radius: 2px;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-		}
-		.icon {
-			width: 128px;
-			height: 128px;
-		}
-		#contacts * {
-			margin: 10px 5px;
-		}
-	</style>
 </head>
 <body>
 	<a name="home"></a>
@@ -153,6 +46,10 @@
     			<div class="icon" style="background: url('/sifchain.jpg');"></div>
     			<div class="small title">Sifchain</div>
     		</div>
+			<div class="project">
+    			<div class="icon" style="background: url('/bcna.png');"></div>
+    			<div class="small title">BitCanna</div>
+    		</div>
     	</div>
     </div>
     <div class="pad150">&nbsp;</div>
@@ -162,10 +59,7 @@
     	<div id="contacts">
     		<div><i class="fa-brands fa-github"></i><a href="https://github.com/green-node">GitHub</a></div>
     		<div><i class="fa-brands fa-discord"></i><a href="https://discord.gg/AdQjZtZFCK">Discord</a></div>
-    		<div><i class="fa-solid fa-envelope"></i></div>
-    		<div></div>
-    		<div></div>
-    		<div></div>
+    		<div><i class="fa-solid fa-envelope"></i><a href="mailto:green.node.validators@gmail.com">green.node.validators@gmail.com</a></div>
     	</div>
     	<div><i class="fa-solid fa-phone-volume" style="font-size: 4em; color: #008000;"></i></div>
     </div>
