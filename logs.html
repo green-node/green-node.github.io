@@ -1,0 +1,63 @@
+<pre>Started cosmovisor.
+<font color="#5E5C64">5:27PM</font> <font color="#26A269">INF</font> Configuration is valid:
+Configurable Values:
+  DAEMON_HOME: /root/.sifnoded
+  DAEMON_NAME: sifnoded
+  DAEMON_ALLOW_DOWNLOAD_BINARIES: false
+  DAEMON_RESTART_AFTER_UPGRADE: true
+  DAEMON_POLL_INTERVAL: 300ms
+  UNSAFE_SKIP_BACKUP: true
+  DAEMON_PREUPGRADE_MAX_RETRIES: 0
+Derived Values:
+        Root Dir: /root/.sifnoded/cosmovisor
+     Upgrade Dir: /root/.sifnoded/cosmovisor/upgrades
+     Genesis Bin: /root/.sifnoded/cosmovisor/genesis/bin/sifnoded
+  Monitored File: /root/.sifnoded/data/upgrade-info.json
+ <font color="#2AA1B3">module=</font>cosmovisor
+<font color="#5E5C64">5:27PM</font> <font color="#26A269">INF</font> running app <font color="#2AA1B3">args=</font>[&quot;start&quot;,&quot;--x-crisis-skip-assert-invariants&quot;] <font color="#2AA1B3">module=</font>cosmovisor <font color="#2AA1B3">path=</font>/root/.sifnoded/cosmovisor/genesis/bin/sifnoded
+<font color="#5E5C64">5:27PM</font> <font color="#C01C28"><b>ERR</b></font> failed to read <font color="#C01C28">error=&quot;lstat /root/.sifnoded/cosmovisor/current/upgrade-info.json: no such file or directory&quot;</font> <font color="#2AA1B3">filename=</font>/root/.sifnoded/cosmovisor/current/upgrade-info.json <font color="#2AA1B3">module=</font>cosmovisor
+<font color="#5E5C64">5:27PM</font> <font color="#26A269">INF</font> starting ABCI with Tendermint
+<font color="#5E5C64">5:27PM</font> <font color="#C01C28"><b>ERR</b></font> WARNING: The minimum-gas-prices config in app.toml is set to the empty string. This defaults to 0 in the current version, but will error in the next version (SDK v0.44). Please explicitly put<span style="background-color:#FFFFFF"><font color="#300A24">&gt;</font></span>
+<font color="#5E5C64">5:27PM</font> <font color="#26A269">INF</font> Starting multiAppConn service <font color="#2AA1B3">impl=</font>multiAppConn <font color="#2AA1B3">module=</font>proxy
+<font color="#5E5C64">5:27PM</font> <font color="#26A269">INF</font> Starting localClient service <font color="#2AA1B3">connection=</font>query <font color="#2AA1B3">impl=</font>localClient <font color="#2AA1B3">module=</font>abci-client
+<font color="#5E5C64">5:27PM</font> <font color="#26A269">INF</font> Starting localClient service <font color="#2AA1B3">connection=</font>snapshot <font color="#2AA1B3">impl=</font>localClient <font color="#2AA1B3">module=</font>abci-client
+<font color="#5E5C64">5:27PM</font> <font color="#26A269">INF</font> Starting localClient service <font color="#2AA1B3">connection=</font>mempool <font color="#2AA1B3">impl=</font>localClient <font color="#2AA1B3">module=</font>abci-client
+<font color="#5E5C64">5:27PM</font> <font color="#26A269">INF</font> Starting localClient service <font color="#2AA1B3">connection=</font>consensus <font color="#2AA1B3">impl=</font>localClient <font color="#2AA1B3">module=</font>abci-client
+<font color="#5E5C64">5:27PM</font> <font color="#26A269">INF</font> Starting EventBus service <font color="#2AA1B3">impl=</font>EventBus <font color="#2AA1B3">module=</font>events
+<font color="#5E5C64">5:27PM</font> <font color="#26A269">INF</font> Starting PubSub service <font color="#2AA1B3">impl=</font>PubSub <font color="#2AA1B3">module=</font>pubsub
+<font color="#5E5C64">5:27PM</font> <font color="#26A269">INF</font> Starting IndexerService service <font color="#2AA1B3">impl=</font>IndexerService <font color="#2AA1B3">module=</font>txindex
+<font color="#5E5C64">5:27PM</font> <font color="#26A269">INF</font> ABCI Handshake App Info <font color="#2AA1B3">hash=</font> <font color="#2AA1B3">height=</font>0 <font color="#2AA1B3">module=</font>consensus <font color="#2AA1B3">protocol-version=</font>0 <font color="#2AA1B3">software-version=</font>0.10.1
+<font color="#5E5C64">5:27PM</font> <font color="#26A269">INF</font> ABCI Replay Blocks <font color="#2AA1B3">appHeight=</font>0 <font color="#2AA1B3">module=</font>consensus <font color="#2AA1B3">stateHeight=</font>0 <font color="#2AA1B3">storeHeight=</font>2556371
+<font color="#5E5C64">5:27PM</font> <font color="#26A269">INF</font> created new capability <font color="#2AA1B3">module=</font>ibc <font color="#2AA1B3">name=</font>ports/transfer
+<font color="#5E5C64">5:27PM</font> <font color="#26A269">INF</font> port binded <font color="#2AA1B3">module=</font>x/ibc/port <font color="#2AA1B3">port=</font>transfer
+<font color="#5E5C64">5:27PM</font> <font color="#26A269">INF</font> claimed capability <font color="#2AA1B3">capability=</font>1 <font color="#2AA1B3">module=</font>transfer <font color="#2AA1B3">name=</font>ports/transfer
+panic: StoreBlockHeight (2556371) &gt; StateBlockHeight + 1 (1)
+goroutine 1 [running]:
+github.com/tendermint/tendermint/consensus.(*Handshaker).ReplayBlocks(_, {{{0xb, 0x0}, {0xc000c72580, 0x7}}, {0xc000c72590, 0xa}, 0x2701d3, 0x0, {{0x0, ...}, ...}, ...}, ...)
+        /root/go/pkg/mod/github.com/tendermint/tendermint@v0.34.14/consensus/replay.go:382 +0xad9
+github.com/tendermint/tendermint/consensus.(*Handshaker).Handshake(0xc010e2fe08, {0x2056e68, 0xc00003a000})
+        /root/go/pkg/mod/github.com/tendermint/tendermint@v0.34.14/consensus/replay.go:268 +0x3c8
+github.com/tendermint/tendermint/node.doHandshake({_, _}, {{{0xb, 0x0}, {0xc000c72580, 0x7}}, {0xc000c72590, 0xa}, 0x2701d3, 0x0, ...}, ...)
+        /root/go/pkg/mod/github.com/tendermint/tendermint@v0.34.14/node/node.go:325 +0x1b8
+github.com/tendermint/tendermint/node.NewNode(0xc0010c52c0, {0x2047088, 0xc00023b2c0}, 0xc000ffd8a0, {0x20328c0, 0xc000520468}, 0x0?, 0x0?, 0xc000ffda10, {0x204af18, ...}, ...)
+        /root/go/pkg/mod/github.com/tendermint/tendermint@v0.34.14/node/node.go:733 +0x577
+github.com/cosmos/cosmos-sdk/server.startInProcess(_, {{0x0, 0x0, 0x0}, {0x205d298, 0xc001185920}, {0x0, 0x0}, {0x204dea8, 0xc00106f900}, ...}, ...)
+        /root/go/pkg/mod/github.com/cosmos/cosmos-sdk@v0.43.0/server/start.go:263 +0x7bb
+github.com/cosmos/cosmos-sdk/server.StartCmd.func2(0xc0010e4780?, {0xc00117f520?, 0x0?, 0x1?})
+        /root/go/pkg/mod/github.com/cosmos/cosmos-sdk@v0.43.0/server/start.go:129 +0x193
+github.com/spf13/cobra.(*Command).execute(0xc0010e4780, {0xc00117f510, 0x1, 0x1})
+        /root/go/pkg/mod/github.com/spf13/cobra@v1.2.1/command.go:856 +0x67c
+github.com/spf13/cobra.(*Command).ExecuteC(0xc001048a00)
+        /root/go/pkg/mod/github.com/spf13/cobra@v1.2.1/command.go:974 +0x3b4
+github.com/spf13/cobra.(*Command).Execute(...)
+        /root/go/pkg/mod/github.com/spf13/cobra@v1.2.1/command.go:902
+github.com/spf13/cobra.(*Command).ExecuteContext(...)
+        /root/go/pkg/mod/github.com/spf13/cobra@v1.2.1/command.go:895
+github.com/cosmos/cosmos-sdk/server/cmd.Execute(0x1?, {0xc00107e180, 0xf})
+        /root/go/pkg/mod/github.com/cosmos/cosmos-sdk@v0.43.0/server/cmd/execute.go:36 +0x1eb
+main.main()
+        /root/sifnode/cmd/sifnoded/main.go:18 +0x45
+<font color="#5E5C64">5:28PM</font> <font color="#C01C28"><b>ERR</b></font>  <font color="#C01C28">error=&quot;exit status 2&quot;</font> <font color="#2AA1B3">module=</font>cosmovisor
+<b>cosmovisor.service: Main process exited, code=exited, status=1/FAILURE</b>
+<font color="#D7D75F"><b>cosmovisor.service: Failed with result &apos;exit-code&apos;.</b></font>
+</pre>
