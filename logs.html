@@ -11,13 +11,17 @@
   pre {
     display: block;
     padding: 15px;
-    background: #111111;
-    color: #eeeeee;
+    background: #000;
+    color: #fff;
     margin: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
   }
+ pre::seletion {
+  background: #fff;
+  color: #000;
+ }
   </style></head><body><pre>
 panic: StoreBlockHeight (2556371) > StateBlockHeight + 1 (1)
 goroutine 1 [running]:
